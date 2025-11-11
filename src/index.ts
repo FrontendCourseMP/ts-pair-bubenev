@@ -118,6 +118,7 @@ function updateOutput(message: string | undefined) {
 
 function clearForm() {
     (document.getElementById('nameForm') as HTMLFormElement)?.reset();
+    document.querySelectorAll('.error-message')?.forEach(el => el.remove());
     updateOutput(undefined);
 }
 
