@@ -10,9 +10,9 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 1rem;
     background-color: var(--color-bg);
 }
 
@@ -30,20 +30,20 @@ h1 {
     margin-bottom: 30px;
 }
 
-.form-group {
-    margin-bottom: 20px;
+legend {
+    color: var(--color-text);
+    margin: auto;
+    font-size: 2rem;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: var(--color-text);
+.form-group {
+    position: relative;
+    margin-bottom: 1.7rem;
 }
 
 .required::after {
     content: " *";
-    color: red;
+    color: var(--color-danger);
 }
 
 input[type="text"] {
@@ -59,9 +59,25 @@ input[type="text"] {
     color: var(--color-text);
 }
 
-input[type="text"]:focus {
-    border-color: var(--color-primary);
-    outline: none;
+label {
+    color: var(--color-text);
+    padding: 10px;
+}
+
+input[type="text"] + label {
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.2s;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    opacity: 0.5;
+    background: transparent;
+}
+
+input[type="text"]:focus + label, input[type="text"]:not(:placeholder-shown) + label {
+    opacity: 1;
+    transform: translateY(-90%) translateX(-14px);
 }
 
 output {
@@ -77,7 +93,7 @@ output {
 
 .button-group {
     display: flex;
-    gap: 10px;
+    gap: 0.5rem;
     margin-top: 20px;
 }
 
