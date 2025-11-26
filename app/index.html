@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Парсер ФИО</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+<fieldset class="container">
+    <legend>Парсер ФИО</legend>
+    <form id="nameForm">
+        <div class="form-group">
+            <input type="text" id="lastName" placeholder="" required>
+            <label for="lastName" class="required">Фамилия:</label>
+        </div>
+
+        <div class="form-group">
+            <input type="text" id="firstName" placeholder="" required>
+            <label for="firstName" class="required">Имя:</label>
+        </div>
+
+        <div class="form-group">
+            <input type="text" id="middleName" placeholder="">
+            <label class="input" for="middleName">Отчество:</label>
+        </div>
+
+        <div class="form-group">
+            <label for="fullNameOutput">Результат:</label>
+            <output id="fullNameOutput" class="waiting">Введите данные выше</output>
+        </div>
+
+        <div class="button-group">
+            <button type="submit" class="btn-primary">
+                Получить инициалы
+            </button>
+            <button type="button" id="clearForm" class="btn-secondary">
+                Очистить
+            </button>
+        </div>
+    </form>
+</fieldset>
+
+<fieldset class="container">
+    <legend>Парсер математической строки</legend>
+    <form id="mathForm">
+        <div class="form-group">
+            <input type="text" id="mathInput" placeholder="" required>
+            <label for="mathInput" class="required">Математическая строка:</label>
+        </div>
+        <div class="form-group">
+            <label for="mathOutput">Результат:</label>
+            <output id="mathOutput" class="waiting">Введите данные выше</output>
+        </div>
+
+        <div class="button-group">
+            <button type="submit" id="mathResult" class="btn-primary">
+                Получить результат
+            </button>
+            <button type="button" id="mathClear" class="btn-secondary">
+                Очистить
+            </button>
+        </div>
+    </form>
+</fieldset>
+<script type="module" src="dist/index.js"></script>
+</body>
+</html>

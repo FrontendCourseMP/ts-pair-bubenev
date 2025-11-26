@@ -1,9 +1,5 @@
-/**
- * @param lastName - Фамилия
- * @param firstName - Имя
- * @param middleName - Отчество (опционально)
- * @returns
- */
+import './mathFormHandler'
+
 function processNameForm(lastName: string, firstName: string, middleName: string = ''): string | undefined {
     document.querySelectorAll('.error-message')?.forEach(el => el.remove());
     const parsedLastName = parseName(lastName);
@@ -28,10 +24,6 @@ function processNameForm(lastName: string, firstName: string, middleName: string
     return formatInitials(parsedLastName, parsedFirstName, parsedMiddleName);
 }
 
-/**
- * @param name - Имя для парсинга
- * @returns Очищенное имя
- */
 function parseName(name: string): string {
     return name
         .trim()
@@ -75,13 +67,6 @@ function validateValues(props: {lastName: string, firstName: string, middleName:
     return true
 }
 
-/**
-
- * @param lastName - Фамилия
- * @param firstName - Имя
- * @param middleName - Отчество
- * @returns Строка в формате "Фамилия И.О."
- */
 function formatInitials(lastName: string, firstName: string, middleName: string): string {
     const firstInitial = firstName.charAt(0) + '.';
     const middleInitial = middleName ? middleName.charAt(0) + '.' : '';
@@ -127,4 +112,6 @@ document.getElementById('nameForm')?.addEventListener('submit', function(e) {
     processForm();
 });
 
-export { processNameForm, parseName, validateValues, formatInitials };
+document.getElementById('clearForm')?.addEventListener('click', (_) => {
+    clearForm();
+})

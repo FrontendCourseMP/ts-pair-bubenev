@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc && ts-add-js-extension --dir=app/dist",
+    "dev": "tsc --watch"
   },
   "keywords": [],
   "devDependencies": {
+    "ts-add-js-extension": "^1.6.6",
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.17",
+    "tailwindcss": "^4.1.17"
   }
 }

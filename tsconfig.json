@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "target": "es2016",
-    "module": "commonjs",
+    "outDir": "./app/dist",
+    "rootDir": "./app/src",
+    "target": "es2024",
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
