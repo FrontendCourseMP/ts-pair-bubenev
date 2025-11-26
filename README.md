@@ -1,3 +1,7 @@
+# Необходимы пакеты:
+- [docker](https://docs.docker.com/engine/install/)
+- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+
 # Сборка
 ```sh
 $ npm run build
